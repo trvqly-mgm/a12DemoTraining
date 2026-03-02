@@ -15,6 +15,7 @@ import {
     DefaultElementLibraryFactories
 } from "@com.mgmtp.a12.contentengine/contentengine-default-element-library";
 import { LoggerFactory } from "@com.mgmtp.a12.utils/utils-logging";
+import {playgroundModule} from "./playground";
 
 const logger = LoggerFactory.getLogger("PT/modules");
 
@@ -27,7 +28,8 @@ export const ALL_MODULES = [
             ...DefaultElementLibrary.get(),
             modules: [...DefaultElementLibrary.get().modules, ...FormElementsLibrary.modules]
         }
-    })
+    }),
+    playgroundModule()
 ];
 const moduleRegistry = ModuleRegistryProvider.getInstance();
 

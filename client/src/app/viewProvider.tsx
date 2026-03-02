@@ -49,6 +49,7 @@ function createEnginesViewMap(): ViewMap {
         PlaygroundEngine(props) {
             return <CRUDViews.OverviewEngineView {...props} timeMode="24h" />;
         },
+        
         ContentEngine: withFormElementContexts({ ViewComponent: DefaultElementLibraryFactories.ViewComponent })
 
     };

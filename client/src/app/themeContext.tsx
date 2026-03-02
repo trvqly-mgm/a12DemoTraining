@@ -39,6 +39,8 @@ export const THEMES: { [key: string]: DefaultThemeType } = {
     ...loadThemesFromFolder()
 };
 
+
+
 export function getThemeNames(): string[] {
     return Object.keys(THEMES);
 }

@@ -1,0 +1,25 @@
+{
+  "button": {
+    "border": "2px solid transparent",
+    "borderWidth": "2px",
+    "fontFamily": "\"Open Sans\", sans-serif",
+    "fontSize": "0.75rem",
+    "fontWeight": "700",
+    "minHeight": "32px",
+    "textTransform": "uppercase",
+    "primary": {
+      "activated": {
+        "background": "#d50075",
+        "color": "#fff",
+        "interaction": {
+          "active": {
+            "background": "#fff",
+            "color": "#00589f",
+            "border": "2px solid #00589f",
+            "textDecoration": "none"
+          }
+        }
+      }
+    }
+  }
+}
