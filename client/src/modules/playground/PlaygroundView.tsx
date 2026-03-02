@@ -2,14 +2,24 @@ import {Button} from "@com.mgmtp.a12.widgets/widgets-core";
 import {generateUid} from "@com.mgmtp.a12.widgets/widgets-core/lib/common";
 import {Icon} from "@com.mgmtp.a12.widgets/widgets-core/lib/icon";
 import {useDispatch} from "react-redux";
-import {createDummyDocument} from "./createSaga";
-
+import {createDummyDocument, CreatePayload} from "./createSaga";
 
 const PlaygroundView = () => {
     const dispatch  = useDispatch();
-    const payload =  {
-        message: "Hello from the playground!"
-    }
+    const payload: CreatePayload = {
+        documentModelName: "Person_DM",
+        document: {
+            Person: {
+                PersonalData: {
+                    FirstName: "John",
+                    LastName: "Doe",
+                    PlaceOfBirth: null,
+                    EmailAddress: "john.doe@example.com",
+                },
+            },
+        },
+        locale: "en",
+    };
 
     return (
 
