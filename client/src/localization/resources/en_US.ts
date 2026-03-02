@@ -10,8 +10,16 @@ export const en_US: LocalizationKeyTreeType = {
                     logoutButton: "Logout"
                 }
             }
+        },
+        playground: {
+            title: "Playground Title EN",
+            button: {
+                label: " Button EN"
+            }
         }
     },
+
+
     keycloak: {
         processing: {
             message: "You are being redirected or authenticated. Please be patient, this might take a moment."

@@ -10,8 +10,15 @@ export const de_DE: LocalizationKeyTreeType = {
                     logoutButton: "Ausloggen"
                 }
             }
+        },
+        playground: {
+            title: "Playground Title DE",
+            button: {
+                label: " Button DE"
+            }
         }
     },
+
     keycloak: {
         processing: {
             message:

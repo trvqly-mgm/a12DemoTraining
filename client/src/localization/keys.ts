@@ -26,8 +26,15 @@ export const RESOURCE_KEYS = {
                     logoutButton: ""
                 }
             }
+        },
+        playground: {
+            title: "",
+            button: {
+                label: ""
+            }
         }
     },
+
     keycloak: {
         processing: {
             message: ""

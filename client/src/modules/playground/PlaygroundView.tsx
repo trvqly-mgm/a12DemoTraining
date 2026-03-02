@@ -4,8 +4,11 @@ import {Icon} from "@com.mgmtp.a12.widgets/widgets-core/lib/icon";
 import {useDispatch} from "react-redux";
 import {createDummyDocument, CreatePayload} from "./createSaga";
 
+import {useLocalizer} from "../../localization";
+
 const PlaygroundView = () => {
     const dispatch  = useDispatch();
+    const localizer = useLocalizer();
     const payload: CreatePayload = {
         documentModelName: "Person_DM",
         document: {
@@ -24,7 +27,7 @@ const PlaygroundView = () => {
     return (
 
         <div style={{ padding: "24px" }}>
-            <h1>this is for the button</h1>
+            <h1>{localizer("application.playground.title")}</h1>
             <Button label="search" secondary id={generateUid()} icon={<Icon>search</Icon>}
                     onClick={() => dispatch(createDummyDocument(payload))}
             />
