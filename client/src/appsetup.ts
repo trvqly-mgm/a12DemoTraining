@@ -38,7 +38,6 @@ import { uaaIntegration } from "./uaa/integration";
 import { enableReduxDevTools } from "./config/devtools";
 import { setLocaleKeycloakOnLoginMiddleware } from "./middlewares";
 import { LoadModelGraphSaga } from "./sagas/loadModelGraph";
-import {createSaga} from "./modules/playground/createSaga";
 
 let config: ApplicationSetup;
 
@@ -72,7 +71,6 @@ export function setup(): {
             ...OverviewEngineFactories.createApplicationSagas()
         ],
         customSagas: [
-            createSaga,
             ...CRUDFactories.createSagas(),
             ...RelationshipFactories.createSagas({ dataHandlers }),
             LoadModelGraphSaga,

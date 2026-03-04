@@ -1,38 +1,39 @@
-import {Button} from "@com.mgmtp.a12.widgets/widgets-core";
-import {generateUid} from "@com.mgmtp.a12.widgets/widgets-core/lib/common";
-import {Icon} from "@com.mgmtp.a12.widgets/widgets-core/lib/icon";
-import {useDispatch} from "react-redux";
-import {createDummyDocument, CreatePayload} from "./createSaga";
+import { ReactElement } from "react";
+import { useDispatch } from "react-redux";
 
-import {useLocalizer} from "../../localization";
+import { Button } from "@com.mgmtp.a12.widgets/widgets-core";
+import { Icon } from "@com.mgmtp.a12.widgets/widgets-core/lib/icon";
 
-const PlaygroundView = () => {
-    const dispatch  = useDispatch();
+import { RESOURCE_KEYS, useLocalizer } from "../../localization";
+
+import { createDummyDocument, CreatePayload } from "./createSaga";
+
+export default function PlaygroundView(): ReactElement {
+    const dispatch = useDispatch();
     const localizer = useLocalizer();
     const payload: CreatePayload = {
         documentModelName: "Person_DM",
         document: {
             Person: {
                 PersonalData: {
-                    FirstName: "John",
-                    LastName: "Doe",
-                    PlaceOfBirth: null,
-                    EmailAddress: "john.doe@example.com",
-                },
-            },
+                    FirstName: "Max",
+                    LastName: "Mustermann",
+                    EmailAddress: "max.mustermann@mgm-tp.com"
+                }
+            }
         },
-        locale: "en",
+        locale: "en"
     };
-
     return (
-
-        <div style={{ padding: "24px" }}>
-            <h1>{localizer("application.playground.title")}</h1>
-            <Button label="search" secondary id={generateUid()} icon={<Icon>search</Icon>}
-                    onClick={() => dispatch(createDummyDocument(payload))}
+        <div>
+            <h1>{localizer(RESOURCE_KEYS.application.playground.title)}</h1>
+            <Button
+                label={localizer(RESOURCE_KEYS.application.playground.buttonText)}
+                primary
+                icon={<Icon>add</Icon>}
+                //className={"h_purpleBG"}
+                onClick={() => dispatch(createDummyDocument(payload))}
             />
         </div>
     );
-};
-
-export default PlaygroundView;
+}

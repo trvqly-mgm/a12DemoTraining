@@ -12,14 +12,20 @@ export const en_US: LocalizationKeyTreeType = {
             }
         },
         playground: {
-            title: "Playground Title EN",
-            button: {
-                label: " Button EN"
+            title: "This is a static view provider and our playground!",
+            buttonText: "Create dummy document",
+            notification: {
+                title: {
+                    success: "SUCCESS",
+                    error: "ERROR"
+                },
+                message: {
+                    success: "A new dummy document has been created!",
+                    error: "Creating a new dummy document has failed!"
+                }
             }
         }
     },
-
-
     keycloak: {
         processing: {
             message: "You are being redirected or authenticated. Please be patient, this might take a moment."

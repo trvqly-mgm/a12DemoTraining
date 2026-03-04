@@ -12,13 +12,20 @@ export const de_DE: LocalizationKeyTreeType = {
             }
         },
         playground: {
-            title: "Playground Title DE",
-            button: {
-                label: " Button DE"
+            title: "Das ist ein statischer View Provider und unsere Spielwiese!",
+            buttonText: "Erstelle ein Dummy Dokument",
+            notification: {
+                title: {
+                    success: "ERFOLG",
+                    error: "FEHLER"
+                },
+                message: {
+                    success: "Neues Dummy Dokument wurde erstellt!",
+                    error: "Das Erstellen des Dummy Dokumentes ist fehlgeschlagen!"
+                }
             }
         }
     },
-
     keycloak: {
         processing: {
             message:

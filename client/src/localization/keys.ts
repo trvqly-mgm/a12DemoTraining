@@ -29,12 +29,19 @@ export const RESOURCE_KEYS = {
         },
         playground: {
             title: "",
-            button: {
-                label: ""
+            buttonText: "",
+            notification: {
+                title: {
+                    success: "",
+                    error: ""
+                },
+                message: {
+                    success: "",
+                    error: ""
+                }
             }
         }
     },
-
     keycloak: {
         processing: {
             message: ""

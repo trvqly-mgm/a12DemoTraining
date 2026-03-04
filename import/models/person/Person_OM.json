@@ -39,13 +39,13 @@
   "content": {
     "configuration": {
       "enableFilter": true,
-      "showFullTextSearch": true,
-      "pagingSize": 10,
       "filterConfiguration": {
         "showFilterButton": true,
         "showFilterBar": true,
         "filterMode": "all"
       },
+      "showFullTextSearch": true,
+      "pagingSize": 10,
       "rowHeight": 49
     },
     "subHeaderBox": {
@@ -75,6 +75,46 @@
             "name": "add"
           },
           "destructive": false,
+          "primary": false
+        },
+        {
+          "destructive": false,
+          "icon": {
+            "name": "filter_alt",
+            "theme": "filled"
+          },
+          "label": [
+            {
+              "locale": "en",
+              "text": "MillenialsEN"
+            },
+            {
+              "locale": "de",
+              "text": "MillenialsDE"
+            }
+          ],
+          "type": "button",
+          "event": "filter_millenials",
+          "primary": false
+        },
+        {
+          "destructive": false,
+          "icon": {
+            "name": "filter_alt",
+            "theme": "outlined"
+          },
+          "label": [
+            {
+              "locale": "en",
+              "text": "GenEN"
+            },
+            {
+              "locale": "de",
+              "text": "GenDE"
+            }
+          ],
+          "type": "button",
+          "event": "filter_2",
           "primary": false
         }
       ]
